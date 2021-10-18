@@ -19,15 +19,9 @@
   </div>
 
   <div class="forecast-day">
-    <div
-      class="days"
-      *ngFor="let forecast of data?.forecast?.forecast?.forecastday"
-    >
-      <p>{{ forecast?.date | dayFormatting }}</p>
-      min {{ forecast?.day?.mintemp_c }}&deg; / max
-      {{ forecast?.day?.maxtemp_c }}&deg;
-
-      <img src="{{ forecast?.day?.condition?.icon }}" alt="" />
+    <div class="days" *ngFor="let hours of forecastDayHours">
+      <p>{{ hours.time | date: "hh:mm" }}</p>
+      <img src="{{ hours?.condition?.icon }}" alt="" />
     </div>
   </div>
 </div>

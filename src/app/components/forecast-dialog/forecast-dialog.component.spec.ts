@@ -1,7 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ForecastDialogComponent } from './forecast-dialog.component';
-import { DayFormattingModule } from '../../core/utils/day-formatting/day-formatting.module';
 import {
   MAT_DIALOG_DATA,
   MatDialogModule,
@@ -15,7 +14,7 @@ describe('ForecastDialogComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ForecastDialogComponent],
-      imports: [DayFormattingModule, MatDialogModule],
+      imports: [MatDialogModule],
       providers: [
         {
           provide: MatDialogRef,

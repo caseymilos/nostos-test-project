@@ -3,9 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ForecastComponent } from './forecast.component';
 import { Store, StoreModule } from '@ngrx/store';
 import { of } from 'rxjs';
-import { MockStore, provideMockStore } from '@ngrx/store/testing';
-import { selectForecastItems } from '../../store/forecast/forecast.selectors';
-import * as mockData from '../../../assets/mock-response-data';
+import { provideMockStore } from '@ngrx/store/testing';
 
 describe('ForecastComponent', () => {
   let component: ForecastComponent;

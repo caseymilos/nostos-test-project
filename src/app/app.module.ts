@@ -18,7 +18,6 @@ import { CITIES } from './core/constants';
 import { DatePipe } from '@angular/common';
 import { ForecastDialogComponent } from './components/forecast-dialog/forecast-dialog.component';
 import { MatCardModule } from '@angular/material/card';
-import { DayFormattingModule } from './core/utils/day-formatting/day-formatting.module';
 import { ToolbarModule } from './components/toolbar/toolbar.module';
 
 @NgModule({
@@ -38,7 +37,6 @@ import { ToolbarModule } from './components/toolbar/toolbar.module';
     MatToolbarModule,
     MatButtonModule,
     MatCardModule,
-    DayFormattingModule,
     ToolbarModule,
   ],
   providers: [

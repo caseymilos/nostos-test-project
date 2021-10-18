@@ -25,3 +25,23 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Functionality Overview
+
+The example application representing a forecast weather of 5 random cites, called Forecast Weather App.
+
+### General Functionality
+
+* Reading data from [Weather API](https://www.weatherapi.com/)
+* Presenting data on forecast page
+* Clicking on forecast weather for specific city opens a dialog with detailed forecast weather information.
+
+### The general page breakdown looks like this:
+
+* Home page (URL: http://localhost:4200/ )
+* List of cities read from NgRX which are stored in a bit specific way.
+Result from the API returns one city only, so I choose solution to loop each city and to put result in Behaviour Subject,
+and after that through effect to load them into the store and display on app page.
+
+* Click on each city opens Dialog with detailed data provided with @Inject() decorator.
+

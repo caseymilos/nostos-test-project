@@ -9,7 +9,7 @@ import {
 } from '../../store/forecast/forecast.selectors';
 import { BaseDirective } from '../../core/bsae.directive';
 import { takeUntil } from 'rxjs/operators';
-import { WeatherForecast } from '../../core/interfaces/forecast';
+import { Forecastday, WeatherForecast } from '../../core/interfaces/forecast';
 
 @Component({
   selector: 'ntp-forecast',
@@ -18,6 +18,7 @@ import { WeatherForecast } from '../../core/interfaces/forecast';
 })
 export class ForecastComponent extends BaseDirective implements OnInit {
   forecast: WeatherForecast[] = [];
+  hours: Forecastday[] = [];
   loadingForecast = true;
 
   constructor(private store: Store<AppState>) {
