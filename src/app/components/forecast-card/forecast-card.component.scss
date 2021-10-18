@@ -1,0 +1,27 @@
+:host {
+  flex: 0 1 20%;
+  display: block;
+  padding: 0 10px;
+
+  ::ng-deep {
+    .mat-card {
+      background: #51acfc;
+      color: #f7f7f7;
+      cursor: pointer;
+    }
+  }
+  .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  img {
+    width: 70px;
+  }
+
+  .card-deg {
+    font-size: 40px;
+    font-weight: bold;
+  }
+}

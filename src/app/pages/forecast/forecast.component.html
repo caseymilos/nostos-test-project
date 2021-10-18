@@ -1,0 +1,10 @@
+<mat-spinner *ngIf="loadingForecast"></mat-spinner>
+
+<div class="card-wrapper margin-top-20">
+  <ng-container *ngFor="let weatherForecast of forecast">
+    <ntp-forecast-card [weatherForecast]="weatherForecast"></ntp-forecast-card>
+  </ng-container>
+
+</div>
+
+

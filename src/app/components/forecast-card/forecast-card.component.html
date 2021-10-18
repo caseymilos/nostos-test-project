@@ -1,0 +1,19 @@
+<mat-card (click)="openForecastDialog(weatherForecast)">
+  <mat-card-title>{{ weatherForecast?.location?.name }}</mat-card-title>
+  <p class="margin-top-20">{{ weatherForecast?.current?.condition?.text }}</p>
+
+  <mat-card-content>
+    <img
+      src="{{ weatherForecast?.current?.condition?.icon }}"
+      alt="{{ weatherForecast?.current?.condition?.text }}"
+    />
+    <p class="card-deg margin-top-20">
+      {{ weatherForecast?.current?.temp_c }}&deg;
+    </p>
+
+    <div class="info margin-top-20">
+      <span>Wind {{ weatherForecast?.current?.wind_kph }}Km</span>
+      <span>Humidity {{ weatherForecast?.current?.humidity }}</span>
+    </div>
+  </mat-card-content>
+</mat-card>

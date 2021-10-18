@@ -1,0 +1,52 @@
+.weather-forecast-modal {
+  text-align: center;
+  position: relative;
+
+  h2 {
+    font-size: 30px;
+  }
+
+  span {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    font-size: 30px;
+  }
+}
+
+.forecast-deg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    font-weight: bold;
+    font-size: 40px;
+  }
+
+  img {
+    width: 100px;
+  }
+}
+
+.location-info {
+  width: 55%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #afafaf;
+}
+
+.forecast-day {
+  width: 80%;
+  margin: 20px auto 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.days {
+  border-right: 2px solid #eee;
+  padding-right: 5px;
+}

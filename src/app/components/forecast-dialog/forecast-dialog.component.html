@@ -1,0 +1,33 @@
+<div class="weather-forecast-modal">
+  <span (click)="closeDialog()">&times;</span>
+  <h2>
+    {{ data?.forecast?.location?.name }} -
+    {{ data?.forecast?.location?.country }}
+  </h2>
+  <div class="forecast-deg">
+    <div>
+      <p>{{ data?.forecast?.current?.temp_c }}&deg;</p>
+    </div>
+    <div>
+      <img src="{{ data?.forecast?.current?.condition?.icon }}" alt="" />
+    </div>
+  </div>
+  <div class="location-info">
+    <div>Barometer {{ data?.forecast?.current?.pressure_mb }}mb</div>
+    <div>Feels like {{ data?.forecast?.current?.feelslike_c }}&deg;C</div>
+    <div>Humidity {{ data?.forecast?.current?.humidity }}%</div>
+  </div>
+
+  <div class="forecast-day">
+    <div
+      class="days"
+      *ngFor="let forecast of data?.forecast?.forecast?.forecastday"
+    >
+      <p>{{ forecast?.date | dayFormatting }}</p>
+      min {{ forecast?.day?.mintemp_c }}&deg; / max
+      {{ forecast?.day?.maxtemp_c }}&deg;
+
+      <img src="{{ forecast?.day?.condition?.icon }}" alt="" />
+    </div>
+  </div>
+</div>

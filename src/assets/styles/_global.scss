@@ -1,0 +1,14 @@
+@import "utils";
+@import "variables";
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.ntp-dialog-backdrop {
+  backdrop-filter: blur(4px);
+}
